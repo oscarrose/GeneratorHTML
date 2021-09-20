@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PraticaHTMLModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="formularioContacto">
+    <Key>
+      <PropertyRef Name="formularioId" />
+    </Key>
+    <Property Name="formularioId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="apellido" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="telefono" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="facebook" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="instagram" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="whatsApp" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="InfPersonal">
+    <Key>
+      <PropertyRef Name="infPersonalId" />
+    </Key>
+    <Property Name="infPersonalId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NombreCompleto" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="fechaNacimiento" Type="DateTime" Precision="0" />
+    <Property Name="NombreCompletoPadre" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="imgPadre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="NombreCompletoMadre" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="imgMadre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="NombrecompletoPadreAbuela" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="imgPadreAbuela" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="NombreCompletoPadreAbuelo" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="imgPadreAbuelo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="NombrecompletoMadreAbuela" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="imgMadreAbuela" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="NombreCompletoMadreAbuelo" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="imgMadreAbuelo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="NombreCompletoAbuelaBisabuela" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="imgAbuelaBisabuela" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="NombreCompletoAbuelaBisabuelo" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="imgAbuelaBisabuelo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="NombreCompletoAbueloBisabuela" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="imgAbueloBisabuela" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="NombreCompletoAbueloBisabuelo" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="imgAbueloBisabuelo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="pasatiempos">
+    <Key>
+      <PropertyRef Name="pasatiemposId" />
+    </Key>
+    <Property Name="pasatiemposId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombreCompleto" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="PasatiemposFavoritos" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SeriesFav">
+    <Key>
+      <PropertyRef Name="serieId" />
+    </Key>
+    <Property Name="serieId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SerieFav" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="trailer" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="youtuberFav">
+    <Key>
+      <PropertyRef Name="youtuberFavsId" />
+    </Key>
+    <Property Name="youtuberFavsId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="youtubeFav" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="enlaceCanal" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="PraticaHTMLEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="formularioContactos" EntityType="Self.formularioContacto" />
+    <EntitySet Name="InfPersonals" EntityType="Self.InfPersonal" />
+    <EntitySet Name="pasatiempos" EntityType="Self.pasatiempos" />
+    <EntitySet Name="SeriesFavs" EntityType="Self.SeriesFav" />
+    <EntitySet Name="youtuberFavs" EntityType="Self.youtuberFav" />
+  </EntityContainer>
+</Schema>

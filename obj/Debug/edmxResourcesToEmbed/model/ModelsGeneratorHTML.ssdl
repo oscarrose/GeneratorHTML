@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PraticaHTMLModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="formularioContactos">
+    <Key>
+      <PropertyRef Name="formularioId" />
+    </Key>
+    <Property Name="formularioId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="20" />
+    <Property Name="apellido" Type="varchar" MaxLength="20" />
+    <Property Name="Email" Type="varchar" MaxLength="150" />
+    <Property Name="telefono" Type="varchar" MaxLength="15" />
+    <Property Name="facebook" Type="varchar" MaxLength="25" />
+    <Property Name="instagram" Type="varchar" MaxLength="35" />
+    <Property Name="whatsApp" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="InfPersonal">
+    <Key>
+      <PropertyRef Name="infPersonalId" />
+    </Key>
+    <Property Name="infPersonalId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NombreCompleto" Type="varchar" MaxLength="40" />
+    <Property Name="fechaNacimiento" Type="date" />
+    <Property Name="NombreCompletoPadre" Type="varchar" MaxLength="40" />
+    <Property Name="imgPadre" Type="varchar(max)" />
+    <Property Name="NombreCompletoMadre" Type="varchar" MaxLength="40" />
+    <Property Name="imgMadre" Type="varchar(max)" />
+    <Property Name="NombrecompletoPadreAbuela" Type="varchar" MaxLength="40" />
+    <Property Name="imgPadreAbuela" Type="varchar(max)" />
+    <Property Name="NombreCompletoPadreAbuelo" Type="varchar" MaxLength="40" />
+    <Property Name="imgPadreAbuelo" Type="varchar(max)" />
+    <Property Name="NombrecompletoMadreAbuela" Type="varchar" MaxLength="40" />
+    <Property Name="imgMadreAbuela" Type="varchar(max)" />
+    <Property Name="NombreCompletoMadreAbuelo" Type="varchar" MaxLength="40" />
+    <Property Name="imgMadreAbuelo" Type="varchar(max)" />
+    <Property Name="NombreCompletoAbuelaBisabuela" Type="varchar" MaxLength="40" />
+    <Property Name="imgAbuelaBisabuela" Type="varchar(max)" />
+    <Property Name="NombreCompletoAbuelaBisabuelo" Type="varchar" MaxLength="40" />
+    <Property Name="imgAbuelaBisabuelo" Type="varchar(max)" />
+    <Property Name="NombreCompletoAbueloBisabuela" Type="varchar" MaxLength="40" />
+    <Property Name="imgAbueloBisabuela" Type="varchar(max)" />
+    <Property Name="NombreCompletoAbueloBisabuelo" Type="varchar" MaxLength="40" />
+    <Property Name="imgAbueloBisabuelo" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="pasatiempos">
+    <Key>
+      <PropertyRef Name="pasatiemposId" />
+    </Key>
+    <Property Name="pasatiemposId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombreCompleto" Type="varchar" MaxLength="40" />
+    <Property Name="PasatiemposFavoritos" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="SeriesFav">
+    <Key>
+      <PropertyRef Name="serieId" />
+    </Key>
+    <Property Name="serieId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SerieFav" Type="varchar" MaxLength="60" />
+    <Property Name="trailer" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="youtuberFavs">
+    <Key>
+      <PropertyRef Name="youtuberFavsId" />
+    </Key>
+    <Property Name="youtuberFavsId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="youtubeFav" Type="varchar" MaxLength="50" />
+    <Property Name="enlaceCanal" Type="varchar(max)" />
+  </EntityType>
+  <EntityContainer Name="PraticaHTMLModelStoreContainer">
+    <EntitySet Name="formularioContactos" EntityType="Self.formularioContactos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InfPersonal" EntityType="Self.InfPersonal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="pasatiempos" EntityType="Self.pasatiempos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SeriesFav" EntityType="Self.SeriesFav" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="youtuberFavs" EntityType="Self.youtuberFavs" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,10 @@
+       1- protected string photoFatherR;
+        2-protected string MotherPhotoR;
+        3-protected string GrandmaDadR;
+        4-protected string GrandFatherDadR;
+        5-protected string grandmaMonR;
+        6-protected string grandFatherMonR;
+        7-protected string greatGradMontherGrandmaR;
+        8-protected string greatGradFatherGrandmaR;
+        9-protected string greatGrandmontherGrandFatherR;
+       10- protected string greatGrandFatherGrandFatherR;

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PraticaHTMLModelStoreContainer" CdmEntityContainer="PraticaHTMLEntities">
+    <EntitySetMapping Name="formularioContactos">
+      <EntityTypeMapping TypeName="PraticaHTMLModel.formularioContacto">
+        <MappingFragment StoreEntitySet="formularioContactos">
+          <ScalarProperty Name="formularioId" ColumnName="formularioId" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="apellido" ColumnName="apellido" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="facebook" ColumnName="facebook" />
+          <ScalarProperty Name="instagram" ColumnName="instagram" />
+          <ScalarProperty Name="whatsApp" ColumnName="whatsApp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InfPersonals">
+      <EntityTypeMapping TypeName="PraticaHTMLModel.InfPersonal">
+        <MappingFragment StoreEntitySet="InfPersonal">
+          <ScalarProperty Name="imgMadreAbuelo" ColumnName="imgMadreAbuelo" />
+          <ScalarProperty Name="NombreCompletoMadreAbuelo" ColumnName="NombreCompletoMadreAbuelo" />
+          <ScalarProperty Name="imgMadreAbuela" ColumnName="imgMadreAbuela" />
+          <ScalarProperty Name="NombrecompletoMadreAbuela" ColumnName="NombrecompletoMadreAbuela" />
+          <ScalarProperty Name="infPersonalId" ColumnName="infPersonalId" />
+          <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+          <ScalarProperty Name="fechaNacimiento" ColumnName="fechaNacimiento" />
+          <ScalarProperty Name="NombreCompletoPadre" ColumnName="NombreCompletoPadre" />
+          <ScalarProperty Name="imgPadre" ColumnName="imgPadre" />
+          <ScalarProperty Name="NombreCompletoMadre" ColumnName="NombreCompletoMadre" />
+          <ScalarProperty Name="imgMadre" ColumnName="imgMadre" />
+          <ScalarProperty Name="NombrecompletoPadreAbuela" ColumnName="NombrecompletoPadreAbuela" />
+          <ScalarProperty Name="imgPadreAbuela" ColumnName="imgPadreAbuela" />
+          <ScalarProperty Name="NombreCompletoPadreAbuelo" ColumnName="NombreCompletoPadreAbuelo" />
+          <ScalarProperty Name="imgPadreAbuelo" ColumnName="imgPadreAbuelo" />
+          <ScalarProperty Name="NombreCompletoAbuelaBisabuela" ColumnName="NombreCompletoAbuelaBisabuela" />
+          <ScalarProperty Name="imgAbuelaBisabuela" ColumnName="imgAbuelaBisabuela" />
+          <ScalarProperty Name="NombreCompletoAbuelaBisabuelo" ColumnName="NombreCompletoAbuelaBisabuelo" />
+          <ScalarProperty Name="imgAbuelaBisabuelo" ColumnName="imgAbuelaBisabuelo" />
+          <ScalarProperty Name="NombreCompletoAbueloBisabuela" ColumnName="NombreCompletoAbueloBisabuela" />
+          <ScalarProperty Name="imgAbueloBisabuela" ColumnName="imgAbueloBisabuela" />
+          <ScalarProperty Name="NombreCompletoAbueloBisabuelo" ColumnName="NombreCompletoAbueloBisabuelo" />
+          <ScalarProperty Name="imgAbueloBisabuelo" ColumnName="imgAbueloBisabuelo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pasatiempos">
+      <EntityTypeMapping TypeName="PraticaHTMLModel.pasatiempos">
+        <MappingFragment StoreEntitySet="pasatiempos">
+          <ScalarProperty Name="pasatiemposId" ColumnName="pasatiemposId" />
+          <ScalarProperty Name="nombreCompleto" ColumnName="nombreCompleto" />
+          <ScalarProperty Name="PasatiemposFavoritos" ColumnName="PasatiemposFavoritos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SeriesFavs">
+      <EntityTypeMapping TypeName="PraticaHTMLModel.SeriesFav">
+        <MappingFragment StoreEntitySet="SeriesFav">
+          <ScalarProperty Name="serieId" ColumnName="serieId" />
+          <ScalarProperty Name="SerieFav" ColumnName="SerieFav" />
+          <ScalarProperty Name="trailer" ColumnName="trailer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="youtuberFavs">
+      <EntityTypeMapping TypeName="PraticaHTMLModel.youtuberFav">
+        <MappingFragment StoreEntitySet="youtuberFavs">
+          <ScalarProperty Name="youtuberFavsId" ColumnName="youtuberFavsId" />
+          <ScalarProperty Name="youtubeFav" ColumnName="youtubeFav" />
+          <ScalarProperty Name="enlaceCanal" ColumnName="enlaceCanal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

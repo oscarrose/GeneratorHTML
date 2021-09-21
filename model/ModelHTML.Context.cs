@@ -13,10 +13,10 @@ namespace GeneratorHTML.model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class PraticaHTMLEntities2 : DbContext
+    public partial class PraticaHTMLEntities3 : DbContext
     {
-        public PraticaHTMLEntities2()
-            : base("name=PraticaHTMLEntities2")
+        public PraticaHTMLEntities3()
+            : base("name=PraticaHTMLEntities3")
         {
         }
     

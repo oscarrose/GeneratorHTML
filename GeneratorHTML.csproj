@@ -97,6 +97,30 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="formContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formContact.Designer.cs">
+      <DependentUpon>formContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formHobbies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formHobbies.Designer.cs">
+      <DependentUpon>formHobbies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formSerie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formSerie.Designer.cs">
+      <DependentUpon>formSerie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formYoutube.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formYoutube.Designer.cs">
+      <DependentUpon>formYoutube.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmAbout.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,34 +128,34 @@
       <DependentUpon>FrmAbout.cs</DependentUpon>
     </Compile>
     <Compile Include="model\formularioContacto.cs">
-      <DependentUpon>modelsGeneratorHTML.tt</DependentUpon>
+      <DependentUpon>ModelHTML.tt</DependentUpon>
     </Compile>
     <Compile Include="model\InfPersonal.cs">
-      <DependentUpon>modelsGeneratorHTML.tt</DependentUpon>
+      <DependentUpon>ModelHTML.tt</DependentUpon>
     </Compile>
-    <Compile Include="model\modelsGeneratorHTML.Context.cs">
+    <Compile Include="model\ModelHTML.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>modelsGeneratorHTML.Context.tt</DependentUpon>
+      <DependentUpon>ModelHTML.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="model\modelsGeneratorHTML.cs">
+    <Compile Include="model\ModelHTML.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>modelsGeneratorHTML.tt</DependentUpon>
+      <DependentUpon>ModelHTML.tt</DependentUpon>
     </Compile>
-    <Compile Include="model\modelsGeneratorHTML.Designer.cs">
+    <Compile Include="model\ModelHTML.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>modelsGeneratorHTML.edmx</DependentUpon>
+      <DependentUpon>ModelHTML.edmx</DependentUpon>
     </Compile>
     <Compile Include="model\pasatiempos.cs">
-      <DependentUpon>modelsGeneratorHTML.tt</DependentUpon>
+      <DependentUpon>ModelHTML.tt</DependentUpon>
     </Compile>
     <Compile Include="model\SeriesFav.cs">
-      <DependentUpon>modelsGeneratorHTML.tt</DependentUpon>
+      <DependentUpon>ModelHTML.tt</DependentUpon>
     </Compile>
     <Compile Include="model\youtuberFav.cs">
-      <DependentUpon>modelsGeneratorHTML.tt</DependentUpon>
+      <DependentUpon>ModelHTML.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -153,6 +177,18 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formContact.resx">
+      <DependentUpon>formContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formHobbies.resx">
+      <DependentUpon>formHobbies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formSerie.resx">
+      <DependentUpon>formSerie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formYoutube.resx">
+      <DependentUpon>formYoutube.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmAbout.resx">
       <DependentUpon>FrmAbout.cs</DependentUpon>
     </EmbeddedResource>
@@ -164,13 +200,14 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <EntityDeploy Include="model\modelsGeneratorHTML.edmx">
+    <EntityDeploy Include="model\ModelHTML.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>modelsGeneratorHTML.Designer.cs</LastGenOutput>
+      <LastGenOutput>ModelHTML.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="model\modelsGeneratorHTML.edmx.diagram">
-      <DependentUpon>modelsGeneratorHTML.edmx</DependentUpon>
+    <None Include="model\ModelHTML.edmx.diagram">
+      <DependentUpon>ModelHTML.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -189,18 +226,42 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="model\modelsGeneratorHTML.Context.tt">
+    <Content Include="model\ModelHTML.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>modelsGeneratorHTML.edmx</DependentUpon>
-      <LastGenOutput>modelsGeneratorHTML.Context.cs</LastGenOutput>
+      <DependentUpon>ModelHTML.edmx</DependentUpon>
+      <LastGenOutput>ModelHTML.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="model\modelsGeneratorHTML.tt">
+    <Content Include="model\ModelHTML.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>modelsGeneratorHTML.edmx</DependentUpon>
-      <LastGenOutput>modelsGeneratorHTML.cs</LastGenOutput>
+      <DependentUpon>ModelHTML.edmx</DependentUpon>
+      <LastGenOutput>ModelHTML.cs</LastGenOutput>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resource\img4.jpg" />
+    <None Include="resource\img3.jpg" />
+    <None Include="resource\img2.jpg" />
+    <None Include="resource\image defaul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

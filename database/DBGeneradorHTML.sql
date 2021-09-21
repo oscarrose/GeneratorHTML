@@ -56,7 +56,7 @@ imgAbueloBisabuelo varchar(max)
  create table SeriesFav(
  serieId int not null identity constraint PK_seriesFav primary key(serieId),
  SerieFav varchar (60),
- trailer varbinary(max)
+ trailer varchar(max)
  );
  go
 

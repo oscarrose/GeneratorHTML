@@ -9,13 +9,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GeneratorHTML.model;
+using GeneratorHTML.Properties;
 
 namespace GeneratorHTML
 {
     public partial class FrmAbout : Form
     {
         public int? id;
-        protected string photoFatherR;
+       public string photoFatherR;
         protected string MotherPhotoR;
         protected string GrandmaDadR;
         protected string GrandFatherDadR;
@@ -25,16 +26,15 @@ namespace GeneratorHTML
         protected string greatGradFatherGrandmaR;
         protected string greatGrandmontherGrandFatherR;
         protected string greatGrandFatherGrandFatherR;
-
-
+        public string fullPath;
         public FrmAbout( int? id)
         {
             this.id = id;
             InitializeComponent();
             buttonSave.Click += ButtonSave_Click;
             this.Load += FrmAbout_Load1;
-            
-           
+            imagenDefaul();
+
         }
 
         private void FrmAbout_Load1(object sender, EventArgs e)
@@ -44,6 +44,14 @@ namespace GeneratorHTML
                 getData();
             }
         }
+
+
+        public void imagenDefaul()
+        {
+            string fileName = "image_defaul.png";
+            fullPath = Path.GetFullPath(fileName);
+        }
+    
         /// <summary>
         /// Para guardar el contenido en la base de datos
         /// </summary>
@@ -51,64 +59,147 @@ namespace GeneratorHTML
         /// <param name="e"></param>
         private void ButtonSave_Click(object sender, EventArgs e)
         {
-            try
+            if (id != null)
             {
-                using (PraticaHTMLEntities2 db = new PraticaHTMLEntities2())
+                try
                 {
-                    InfPersonal personal = new InfPersonal();
-                    personal.NombreCompleto = textBox1.Text.ToString();
-                    personal.fechaNacimiento = dateTimePicker1.Value;
-
-                    personal.NombreCompletoPadre = textBox2.Text.ToString();
-                    personal.imgPadre = photoFatherR;
-                    personal.NombreCompletoMadre = textBox3.Text.ToString();
-                    personal.imgMadre = MotherPhotoR;
-
-                    personal.NombrecompletoPadreAbuela = textBox4.Text.ToString();
-                    personal.imgPadreAbuela = GrandmaDadR;
-                    personal.NombreCompletoPadreAbuelo = textBox5.Text.ToString();
-                    personal.imgPadreAbuelo = GrandFatherDadR;
-
-                    personal.NombrecompletoMadreAbuela = textBox6.Text.ToString();
-                    personal.imgMadreAbuela = grandmaMonR;
-                    personal.NombreCompletoMadreAbuelo = textBox7.Text.ToString();
-                    personal.imgMadreAbuelo = grandFatherMonR;
-
-                    personal.NombreCompletoAbuelaBisabuela= textBox8.Text.ToString();
-                    personal.imgAbuelaBisabuela= greatGradMontherGrandmaR;
-                    personal.NombreCompletoAbuelaBisabuelo= textBox9.Text.ToString();
-                    personal.imgAbuelaBisabuelo = greatGradFatherGrandmaR;
-
-                    personal.NombreCompletoAbueloBisabuela = textBox10.Text.ToString();
-                    personal.imgAbueloBisabuela = greatGrandmontherGrandFatherR;
-                    personal.NombreCompletoAbueloBisabuelo = textBox11.Text.ToString();
-                    personal.imgAbueloBisabuelo = greatGrandFatherGrandFatherR;
-
-                    db.InfPersonals.Add(personal);
-                    db.SaveChanges();
-                    var result = MessageBox.Show($"Saved successfully! Categories: {personal.infPersonalId}", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    if (result == DialogResult.OK)
+                    using (PraticaHTMLEntities3 db = new PraticaHTMLEntities3())
                     {
+                        InfPersonal personal = db.InfPersonals.Find(id);
+                        personal.NombreCompleto = textBox1.Text.ToString();
+                        personal.fechaNacimiento = dateTimePicker1.Value;
 
-                        clearinput();
+                        personal.NombreCompletoPadre = textBox2.Text.ToString();
+                        personal.imgPadre = photoFatherR ?? fullPath;
+                        personal.NombreCompletoMadre = textBox3.Text.ToString();
+                        personal.imgMadre = MotherPhotoR ?? fullPath;
+
+                        personal.NombrecompletoPadreAbuela = textBox4.Text.ToString();
+                        personal.imgPadreAbuela = GrandmaDadR ?? fullPath;
+                        personal.NombreCompletoPadreAbuelo = textBox5.Text.ToString();
+                        personal.imgPadreAbuelo = GrandFatherDadR ?? fullPath;
+
+                        personal.NombrecompletoMadreAbuela = textBox6.Text.ToString();
+                        personal.imgMadreAbuela = grandmaMonR ?? fullPath;
+                        personal.NombreCompletoMadreAbuelo = textBox7.Text.ToString();
+                        personal.imgMadreAbuelo = grandFatherMonR ?? fullPath;
+
+                        personal.NombreCompletoAbuelaBisabuela = textBox8.Text.ToString();
+                        personal.imgAbuelaBisabuela = greatGradMontherGrandmaR ?? fullPath;
+                        personal.NombreCompletoAbuelaBisabuelo = textBox9.Text.ToString();
+                        personal.imgAbuelaBisabuelo = greatGradFatherGrandmaR ?? fullPath;
+
+                        personal.NombreCompletoAbueloBisabuela = textBox10.Text.ToString();
+                        personal.imgAbueloBisabuela = greatGrandmontherGrandFatherR ?? fullPath;
+                        personal.NombreCompletoAbueloBisabuelo = textBox11.Text.ToString();
+                        personal.imgAbueloBisabuelo = greatGrandFatherGrandFatherR ?? fullPath;
+                        db.SaveChanges();
+                        var result = MessageBox.Show($"Edit successfully! About you: {personal.infPersonalId}", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (result == DialogResult.OK)
+                        {
+
+                            this.Close();
+                        }
+
                     }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Unexpected error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+
+               
+                
+            }
+            else
+            {
+                try
+                {
+                    using (PraticaHTMLEntities3 db = new PraticaHTMLEntities3())
+                    {
+                        InfPersonal personal = new InfPersonal();
+                        personal.NombreCompleto = textBox1.Text.ToString();
+                        personal.fechaNacimiento = dateTimePicker1.Value;
+
+                        personal.NombreCompletoPadre = textBox2.Text.ToString();
+                        personal.imgPadre = photoFatherR ?? fullPath;
+                        personal.NombreCompletoMadre = textBox3.Text.ToString();
+                        personal.imgMadre = MotherPhotoR ?? fullPath;
+
+                        personal.NombrecompletoPadreAbuela = textBox4.Text.ToString();
+                        personal.imgPadreAbuela = GrandmaDadR ?? fullPath;
+                        personal.NombreCompletoPadreAbuelo = textBox5.Text.ToString();
+                        personal.imgPadreAbuelo = GrandFatherDadR ?? fullPath;
+
+                        personal.NombrecompletoMadreAbuela = textBox6.Text.ToString();
+                        personal.imgMadreAbuela = grandmaMonR ?? fullPath;
+                        personal.NombreCompletoMadreAbuelo = textBox7.Text.ToString();
+                        personal.imgMadreAbuelo = grandFatherMonR ?? fullPath;
+
+                        personal.NombreCompletoAbuelaBisabuela = textBox8.Text.ToString();
+                        personal.imgAbuelaBisabuela = greatGradMontherGrandmaR ?? fullPath;
+                        personal.NombreCompletoAbuelaBisabuelo = textBox9.Text.ToString();
+                        personal.imgAbuelaBisabuelo = greatGradFatherGrandmaR ?? fullPath;
+
+                        personal.NombreCompletoAbueloBisabuela = textBox10.Text.ToString();
+                        personal.imgAbueloBisabuela = greatGrandmontherGrandFatherR ?? fullPath;
+                        personal.NombreCompletoAbueloBisabuelo = textBox11.Text.ToString();
+                        personal.imgAbueloBisabuelo = greatGrandFatherGrandFatherR ?? fullPath;
+                        
+
+                        db.InfPersonals.Add(personal);
+                        db.SaveChanges();
+                        var result = MessageBox.Show($"Saved successfully! About you: {personal.infPersonalId}", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (result == DialogResult.OK)
+                        {
+
+                            clearinput();
+                        }
+                    }
+
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message, "Unexpected error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message, "Unexpected error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-          
-          
         }
         /// <summary>
         /// para limpiar los textBox
         /// </summary>
         private void clearinput()
         {
+            textBox1.Clear();
+           
+
+            textBox2.Clear();
+           
+            textBox3.Clear();
+          
+            textBox4.Clear();
+           textBox5.Clear();
+           textBox6.Clear();
+            textBox7.Clear();
+            textBox8.Clear();
+            textBox9.Clear();
+             textBox10.Clear();
+             textBox11.Clear();
+            photofather.Image = null;
+            motherPhoto.Image = null;
+            pictureBox2.Image = null;
+            pictureBox3.Image = null;
+            pictureBox4.Image = null;
+            pictureBox5.Image = null;
+            pictureBox6.Image = null;
+            pictureBox7.Image = null;
+            pictureBox8.Image = null;
+            pictureBox9.Image = null;
             
+
         }
 
         /// <summary>
@@ -120,8 +211,8 @@ namespace GeneratorHTML
             {
                 OpenFileDialog fileDialog = new OpenFileDialog();
 
-                fileDialog.Filter = "JPG|*.jpg";
-              
+                fileDialog.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+
 
                 if (fileDialog.ShowDialog() == DialogResult.OK)
                 {
@@ -159,13 +250,35 @@ namespace GeneratorHTML
         /// </summary>
         public void getData()
         {
-            using (PraticaHTMLEntities2 db = new PraticaHTMLEntities2())
+            using (PraticaHTMLEntities3 db = new PraticaHTMLEntities3())
             {
 
                 try
                 {
+                  
                     InfPersonal p = db.InfPersonals.Find(id);
                     textBox1.Text = p.NombreCompleto.ToString();
+                    dateTimePicker1.Value = p.fechaNacimiento.Value;
+                    textBox2.Text = p.NombreCompletoPadre.ToString();
+                    photofather.Image = Image.FromFile(p.imgPadre.ToString());
+                    textBox3.Text = p.NombreCompletoMadre.ToString();
+                    motherPhoto.Image = Image.FromFile(p.imgMadre.ToString());
+                    textBox4.Text = p.NombrecompletoPadreAbuela.ToString();
+                    pictureBox2.Image = Image.FromFile(p.imgPadreAbuela.ToString());
+                    textBox5.Text = p.NombreCompletoPadreAbuelo.ToString();
+                    pictureBox3.Image = Image.FromFile(p.imgPadreAbuelo.ToString());
+                    textBox6.Text = p.NombrecompletoMadreAbuela.ToString();
+                    pictureBox4.Image = Image.FromFile(p.imgMadreAbuela.ToString());
+                    textBox7.Text = p.NombreCompletoMadreAbuelo.ToString();
+                    pictureBox5.Image = Image.FromFile(p.imgMadreAbuelo.ToString());
+                    textBox8.Text = p.NombreCompletoAbuelaBisabuela.ToString();
+                    pictureBox6.Image = Image.FromFile(p.imgAbuelaBisabuela.ToString());
+                    textBox9.Text = p.NombreCompletoAbuelaBisabuelo.ToString();
+                    pictureBox7.Image = Image.FromFile(p.imgAbuelaBisabuelo.ToString());
+                    textBox10.Text = p.NombreCompletoAbueloBisabuela.ToString();
+                    pictureBox8.Image = Image.FromFile(p.imgAbueloBisabuela.ToString());
+                    textBox11.Text = p.NombreCompletoAbueloBisabuelo.ToString();
+                    pictureBox9.Image = Image.FromFile(p.imgAbueloBisabuelo.ToString());
                 }
                 catch (Exception ex)
                 {
@@ -254,6 +367,9 @@ namespace GeneratorHTML
             pictureBox9.Image = Image.FromFile(greatGrandFatherGrandFatherR);
         }
 
-        
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

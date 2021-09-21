@@ -104,7 +104,7 @@ namespace GeneratorHTML
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.panel1.Controls.Add(this.buttonSave);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.pageTittle);
@@ -117,6 +117,7 @@ namespace GeneratorHTML
             // buttonSave
             // 
             this.buttonSave.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.buttonSave.FlatAppearance.BorderSize = 0;
             this.buttonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSave.Location = new System.Drawing.Point(1121, 4);
@@ -131,17 +132,17 @@ namespace GeneratorHTML
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(12, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(77, 47);
+            this.pictureBox1.Size = new System.Drawing.Size(53, 47);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-           
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
             // pageTittle
             // 
             this.pageTittle.AutoSize = true;
             this.pageTittle.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pageTittle.Location = new System.Drawing.Point(122, 14);
+            this.pageTittle.Location = new System.Drawing.Point(71, 14);
             this.pageTittle.Name = "pageTittle";
             this.pageTittle.Size = new System.Drawing.Size(85, 29);
             this.pageTittle.TabIndex = 0;
@@ -697,7 +698,7 @@ namespace GeneratorHTML
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1237, 741);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
@@ -758,7 +759,6 @@ namespace GeneratorHTML
             this.Name = "FrmAbout";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAbout";
-       
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -836,6 +836,6 @@ namespace GeneratorHTML
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button buttonSave;
-        protected System.Windows.Forms.Label pageTittle;
+        public System.Windows.Forms.Label pageTittle;
     }
 }

@@ -60,7 +60,7 @@
           </Key>
           <Property Name="serieId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="SerieFav" Type="varchar" MaxLength="60" />
-          <Property Name="trailer" Type="varbinary(max)" />
+          <Property Name="trailer" Type="varchar(max)" />
         </EntityType>
         <EntityType Name="youtuberFavs">
           <Key>
@@ -137,7 +137,7 @@
           </Key>
           <Property Name="serieId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="SerieFav" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
-          <Property Name="trailer" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="trailer" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="youtuberFav">
           <Key>
@@ -147,7 +147,7 @@
           <Property Name="youtubeFav" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="enlaceCanal" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityContainer Name="PraticaHTMLEntities2" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="PraticaHTMLEntities3" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="formularioContactos" EntityType="Self.formularioContacto" />
           <EntitySet Name="InfPersonals" EntityType="Self.InfPersonal" />
           <EntitySet Name="pasatiempos" EntityType="Self.pasatiempos" />
@@ -159,7 +159,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="PraticaHTMLModelStoreContainer" CdmEntityContainer="PraticaHTMLEntities2">
+        <EntityContainerMapping StorageEntityContainer="PraticaHTMLModelStoreContainer" CdmEntityContainer="PraticaHTMLEntities3">
           <EntitySetMapping Name="formularioContactos">
             <EntityTypeMapping TypeName="PraticaHTMLModel.formularioContacto">
               <MappingFragment StoreEntitySet="formularioContactos">

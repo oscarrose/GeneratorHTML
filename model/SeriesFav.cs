@@ -16,6 +16,6 @@ namespace GeneratorHTML.model
     {
         public int serieId { get; set; }
         public string SerieFav { get; set; }
-        public byte[] trailer { get; set; }
+        public string trailer { get; set; }
     }
 }

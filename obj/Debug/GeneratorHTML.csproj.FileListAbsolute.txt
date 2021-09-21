@@ -19,3 +19,12 @@ C:\Users\oscar\OneDrive - Universidad Central del Este\universidad ing. Software
 C:\Users\oscar\OneDrive - Universidad Central del Este\universidad ing. Software\Octavo cuatrimestre\tecnologia de internet I\programas y mas\GeneratorHTML\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\oscar\OneDrive - Universidad Central del Este\universidad ing. Software\Octavo cuatrimestre\tecnologia de internet I\programas y mas\GeneratorHTML\obj\Debug\GeneratorHTML.csproj.CopyComplete
 C:\Users\oscar\OneDrive - Universidad Central del Este\universidad ing. Software\Octavo cuatrimestre\tecnologia de internet I\programas y mas\GeneratorHTML\obj\Debug\GeneratorHTML.FrmAbout.resources
+C:\Users\oscar\OneDrive - Universidad Central del Este\universidad ing. Software\Octavo cuatrimestre\tecnologia de internet I\programas y mas\GeneratorHTML\obj\Debug\GeneratorHTML.formHobbies.resources
+C:\Users\oscar\OneDrive - Universidad Central del Este\universidad ing. Software\Octavo cuatrimestre\tecnologia de internet I\programas y mas\GeneratorHTML\obj\Debug\GeneratorHTML.formYoutube.resources
+C:\Users\oscar\OneDrive - Universidad Central del Este\universidad ing. Software\Octavo cuatrimestre\tecnologia de internet I\programas y mas\GeneratorHTML\bin\Debug\Interop.WMPLib.dll
+C:\Users\oscar\OneDrive - Universidad Central del Este\universidad ing. Software\Octavo cuatrimestre\tecnologia de internet I\programas y mas\GeneratorHTML\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\oscar\OneDrive - Universidad Central del Este\universidad ing. Software\Octavo cuatrimestre\tecnologia de internet I\programas y mas\GeneratorHTML\obj\Debug\Interop.WMPLib.dll
+C:\Users\oscar\OneDrive - Universidad Central del Este\universidad ing. Software\Octavo cuatrimestre\tecnologia de internet I\programas y mas\GeneratorHTML\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\oscar\OneDrive - Universidad Central del Este\universidad ing. Software\Octavo cuatrimestre\tecnologia de internet I\programas y mas\GeneratorHTML\obj\Debug\GeneratorHTML.csproj.ResolveComReference.cache
+C:\Users\oscar\OneDrive - Universidad Central del Este\universidad ing. Software\Octavo cuatrimestre\tecnologia de internet I\programas y mas\GeneratorHTML\obj\Debug\GeneratorHTML.formSerie.resources
+C:\Users\oscar\OneDrive - Universidad Central del Este\universidad ing. Software\Octavo cuatrimestre\tecnologia de internet I\programas y mas\GeneratorHTML\obj\Debug\GeneratorHTML.formContact.resources

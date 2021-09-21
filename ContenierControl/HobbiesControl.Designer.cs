@@ -29,26 +29,28 @@ namespace GeneratorHTML.ContenierControl
         /// </summary>
         private void InitializeComponent()
         {
-            this.button3 = new System.Windows.Forms.Button();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.GeneratorHTML = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.addHobbies = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.gridHobbies = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.gridHobbies)).BeginInit();
             this.SuspendLayout();
             // 
-            // button3
+            // GeneratorHTML
             // 
-            this.button3.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(914, 40);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(152, 51);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "HTML";
-            this.button3.UseVisualStyleBackColor = false;
+            this.GeneratorHTML.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.GeneratorHTML.FlatAppearance.BorderSize = 0;
+            this.GeneratorHTML.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GeneratorHTML.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GeneratorHTML.Location = new System.Drawing.Point(914, 40);
+            this.GeneratorHTML.Name = "GeneratorHTML";
+            this.GeneratorHTML.Size = new System.Drawing.Size(152, 51);
+            this.GeneratorHTML.TabIndex = 5;
+            this.GeneratorHTML.Text = "HTML";
+            this.GeneratorHTML.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
@@ -56,25 +58,26 @@ namespace GeneratorHTML.ContenierControl
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(745, 40);
+            this.button2.Location = new System.Drawing.Point(420, 40);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(152, 51);
             this.button2.TabIndex = 6;
             this.button2.Text = "Edit content";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Visible = false;
             // 
-            // button1
+            // addHobbies
             // 
-            this.button1.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(578, 40);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(152, 51);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Add content";
-            this.button1.UseVisualStyleBackColor = false;
+            this.addHobbies.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.addHobbies.FlatAppearance.BorderSize = 0;
+            this.addHobbies.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addHobbies.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addHobbies.Location = new System.Drawing.Point(736, 40);
+            this.addHobbies.Name = "addHobbies";
+            this.addHobbies.Size = new System.Drawing.Size(152, 51);
+            this.addHobbies.TabIndex = 7;
+            this.addHobbies.Text = "Add content";
+            this.addHobbies.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -86,32 +89,53 @@ namespace GeneratorHTML.ContenierControl
             this.label1.TabIndex = 4;
             this.label1.Text = "Hobbies";
             // 
-            // dataGridView1
+            // gridHobbies
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.HighlightText;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 97);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1072, 615);
-            this.dataGridView1.TabIndex = 3;
+            this.gridHobbies.AllowUserToAddRows = false;
+            this.gridHobbies.AllowUserToDeleteRows = false;
+            this.gridHobbies.BackgroundColor = System.Drawing.SystemColors.HighlightText;
+            this.gridHobbies.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridHobbies.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.gridHobbies.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridHobbies.DefaultCellStyle = dataGridViewCellStyle6;
+            this.gridHobbies.Location = new System.Drawing.Point(3, 97);
+            this.gridHobbies.MultiSelect = false;
+            this.gridHobbies.Name = "gridHobbies";
+            this.gridHobbies.ReadOnly = true;
+            this.gridHobbies.RowHeadersVisible = false;
+            this.gridHobbies.RowHeadersWidth = 51;
+            this.gridHobbies.RowTemplate.Height = 24;
+            this.gridHobbies.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridHobbies.Size = new System.Drawing.Size(1072, 615);
+            this.gridHobbies.TabIndex = 3;
             // 
             // HobbiesControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.GeneratorHTML);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.addHobbies);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.gridHobbies);
             this.Name = "HobbiesControl";
             this.Size = new System.Drawing.Size(1078, 722);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridHobbies)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -119,10 +143,10 @@ namespace GeneratorHTML.ContenierControl
 
         #endregion
 
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button GeneratorHTML;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button addHobbies;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView gridHobbies;
     }
 }
